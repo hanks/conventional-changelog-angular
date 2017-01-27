@@ -52,9 +52,11 @@ var writerOpts = {
     } else if (commit.type === 'fix') {
       commit.type = 'Bug Fixes';
     } else if (commit.type === 'perf') {
-      commit.type = 'Performance Improvements';
+      commit.type = 'Performance Tunings';
     } else if (commit.type === 'revert') {
       commit.type = 'Reverts';
+    } else if (commit.type === 'improvement') {
+      commit.type = 'Improvements';
     } else if (discard) {
       return;
     } else if (commit.type === 'docs') {
