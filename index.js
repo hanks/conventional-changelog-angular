@@ -55,8 +55,10 @@ var writerOpts = {
       commit.type = 'Performance Tunings';
     } else if (commit.type === 'revert') {
       commit.type = 'Reverts';
-    } else if (commit.type === 'improvement') {
-      commit.type = 'Improvements';
+    } else if (commit.type === 'impr') {
+      commit.type = 'Function Improvements';
+    } else if (commit.type === 'depr') {
+      commit.type = 'Deprecation Removals';
     } else if (discard) {
       return;
     } else if (commit.type === 'docs') {
