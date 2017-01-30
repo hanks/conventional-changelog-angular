@@ -48,7 +48,7 @@ var writerOpts = {
     });
 
     if (commit.type === 'feat') {
-      commit.type = 'Features';
+      commit.type = 'New Features';
     } else if (commit.type === 'fix') {
       commit.type = 'Bug Fixes';
     } else if (commit.type === 'perf') {
