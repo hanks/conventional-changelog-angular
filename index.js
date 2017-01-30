@@ -34,6 +34,13 @@ function issueUrl() {
     if (gitUrl) {
       return gitUrl + '/issues/';
     }
+  } else if (pkgJson.repository && pkgJson.repository.url && ~pkgJson.repository.url.indexOf('bitbucket.org')) {
+    var gitUrl = gufg(pkgJson.repository.url);
+
+    if (gitUrl) {
+      // hard coding for jira
+      return 'https://spotlight.atlassian.net/browse/';
+    }
   }
 }
 
